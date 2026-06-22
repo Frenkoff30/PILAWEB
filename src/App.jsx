@@ -7,7 +7,6 @@ import Services from './components/Services'
 import HowItWorks from './components/HowItWorks'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Particles from './components/FireBottom'
 import CursorTrail from './components/CursorTrail'
 import { useScrollReveal } from './hooks/useScrollReveal'
 
@@ -18,7 +17,6 @@ export default function App() {
     <div className="relative" style={{ background: '#F0E6CC', minHeight: '100vh' }}>
       <Background />
       <CursorTrail />
-      <Particles />
       <div className="relative" style={{ zIndex: 1 }}>
         <Navbar />
         <main>
