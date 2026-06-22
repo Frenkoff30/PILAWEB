@@ -14,7 +14,7 @@ export default function LoadingScreen() {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      background: '#1A0C04',
+      background: '#F0E6CC',
       display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '24px',
       opacity: phase === 2 ? 0 : 1,
       transition: 'opacity 0.6s ease',
@@ -22,8 +22,7 @@ export default function LoadingScreen() {
     }}>
       <img src="/images/logo good.png" alt=""
         style={{
-          width: '120px', height: 'auto',
-          filter: 'brightness(0) invert(1)',
+          width: '140px', height: 'auto',
           opacity: phase >= 1 ? 1 : 0,
           transform: phase >= 1 ? 'scale(1)' : 'scale(0.8)',
           transition: 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)',
