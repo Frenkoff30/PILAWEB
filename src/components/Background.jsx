@@ -22,6 +22,19 @@ export default function Background() {
   return (
     <div aria-hidden="true" style={{ position:'absolute', inset:0, zIndex:0, pointerEvents:'none', overflow:'hidden' }}>
 
+      {/* ═══ Animated warm gradient mesh ═══ */}
+      <div style={{
+        position:'absolute', inset:'-15%',
+        background:`
+          radial-gradient(40% 50% at 18% 22%, rgba(200,148,58,0.16), transparent 60%),
+          radial-gradient(38% 46% at 82% 30%, rgba(166,120,48,0.13), transparent 60%),
+          radial-gradient(45% 50% at 70% 78%, rgba(74,124,47,0.1), transparent 62%),
+          radial-gradient(40% 48% at 25% 80%, rgba(180,110,30,0.12), transparent 60%)
+        `,
+        animation:'meshDrift 22s ease-in-out infinite',
+        willChange:'transform',
+      }}/>
+
       {/* ═══ WOOD GRAIN — horizontal fiber lines ═══ */}
       <div style={{
         position:'absolute', inset:0,

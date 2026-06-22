@@ -10,18 +10,20 @@ import CtaBanner from './components/CtaBanner'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
-import CursorTrail from './components/CursorTrail'
+import SawCursor from './components/SawCursor'
 import { useScrollReveal } from './hooks/useScrollReveal'
+import { useTilt } from './hooks/useTilt'
 
 export default function App() {
   useScrollReveal()
+  useTilt()
 
   return (
     <>
       <LoadingScreen />
       <div className="relative" style={{ background: '#F0E6CC', minHeight: '100vh' }}>
         <Background />
-        <CursorTrail />
+        <SawCursor />
         <BackToTop />
         <div className="relative" style={{ zIndex: 1 }}>
           <Navbar />

@@ -46,7 +46,7 @@ export default function Services() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           {services.map(({ icon, title, desc, points, accent }) => (
-            <div key={title} className="card-organic overflow-hidden flex flex-col group">
+            <div key={title} data-tilt className="card-organic overflow-hidden flex flex-col group">
               <div style={{ height: '3px', background: accent }}/>
               <div className="p-8 flex flex-col flex-1">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
@@ -77,7 +77,7 @@ export default function Services() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {products.map(({ name, sub, desc }) => (
-            <div key={name} className="card-organic p-6 cursor-default">
+            <div key={name} data-tilt className="card-organic p-6">
               <div className="text-display text-xl mb-1" style={{ color: '#C8943A' }}>{name}</div>
               <div className="text-[10px] font-semibold uppercase tracking-wider mb-2" style={{ color: 'rgba(26,12,4,0.7)' }}>{sub}</div>
               <div className="text-xs leading-relaxed" style={{ color: '#1A0C04' }}>{desc}</div>

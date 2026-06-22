@@ -146,17 +146,34 @@
 
 /* ── Organic card system ── */
 .card-organic {
+  position: relative;
   background: rgba(255,255,255,0.65);
   border: 1px solid rgba(200,148,58,0.12);
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(26,12,4,0.04), 0 1px 3px rgba(26,12,4,0.03);
-  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
-  cursor: default;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .card-organic:hover {
   border-color: rgba(200,148,58,0.4);
-  box-shadow: 0 16px 48px rgba(26,12,4,0.1), 0 4px 12px rgba(200,148,58,0.08);
-  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(26,12,4,0.14), 0 6px 16px rgba(200,148,58,0.1);
+}
+/* Cursor-following sheen for tilt cards */
+[data-tilt]::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.35), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+[data-tilt]:hover::after { opacity: 1; }
+
+/* ── Animated gradient mesh ── */
+@keyframes meshDrift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%     { transform: translate(4%,-3%) scale(1.08); }
+  66%     { transform: translate(-3%,4%) scale(0.96); }
 }
 
 /* ── Smooth section transitions ── */

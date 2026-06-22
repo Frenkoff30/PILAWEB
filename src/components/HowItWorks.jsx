@@ -33,7 +33,7 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map(({ title, desc, icon, color }) => (
-            <div key={title} className="card-organic overflow-hidden flex flex-col">
+            <div key={title} data-tilt className="card-organic overflow-hidden flex flex-col">
               <div style={{ height: '3px', background: color }}/>
               <div className="p-8">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
