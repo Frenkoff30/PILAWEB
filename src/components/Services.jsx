@@ -31,7 +31,7 @@ const products = [
 
 export default function Services() {
   return (
-    <section id="služby" className="py-32 px-8 md:px-16" style={{ background: 'rgba(160,100,20,0.09)', borderTop: '1px solid rgba(200,148,58,0.12)', borderBottom: '1px solid rgba(200,148,58,0.12)' }}>
+    <section id="služby" className="section-pad" style={{ background: 'rgba(160,100,20,0.07)' }}>
       <div className="max-w-7xl mx-auto">
 
         <div className="mb-16">
@@ -39,30 +39,25 @@ export default function Services() {
             <div className="w-10 h-px" style={{ background: '#C8943A' }}/>
             <span className="text-xs font-semibold tracking-[4px] uppercase" style={{ color: '#A07020' }}>Co nabízíme</span>
           </div>
-          <h2 className="text-display leading-none" style={{ fontSize: 'clamp(3rem,7vw,6rem)', color: '#1A0C04' }}>
+          <h2 className="text-display text-wood leading-none" style={{ fontSize: 'clamp(3rem,7vw,6rem)' }}>
             NAŠE SLUŽBY
           </h2>
         </div>
 
-        {/* Service cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
           {services.map(({ icon, title, desc, points, accent }) => (
-            <div key={title}
-              className="rounded-3xl overflow-hidden flex flex-col group cursor-default transition-all duration-300 hover:-translate-y-2"
-              style={{ background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(200,148,58,0.15)', boxShadow: '0 4px 24px rgba(26,12,4,0.04)' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(200,148,58,0.45)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(26,12,4,0.1)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(200,148,58,0.15)'; e.currentTarget.style.boxShadow = '0 4px 24px rgba(26,12,4,0.04)' }}>
-              <div style={{ height: '4px', background: accent }}/>
+            <div key={title} className="card-organic overflow-hidden flex flex-col group">
+              <div style={{ height: '3px', background: accent }}/>
               <div className="p-8 flex flex-col flex-1">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ background: `${accent}18`, color: accent, border: `1px solid ${accent}30` }}>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ background: `${accent}15`, color: accent }}>
                   {icon}
                 </div>
-                <h3 className="text-display text-2xl mb-3 leading-tight" style={{ color: '#1A0C04' }}>{title}</h3>
-                <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: 'rgba(26,12,4,0.78)' }}>{desc}</p>
-                <ul className="space-y-2.5 pt-5" style={{ borderTop: '1px solid rgba(26,12,4,0.07)' }}>
+                <h3 className="text-display text-xl mb-3 leading-tight" style={{ color: '#1A0C04' }}>{title}</h3>
+                <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: '#1A0C04' }}>{desc}</p>
+                <ul className="space-y-2.5 pt-5" style={{ borderTop: '1px solid rgba(26,12,4,0.06)' }}>
                   {points.map(p => (
-                    <li key={p} className="flex items-center gap-3 text-sm" style={{ color: 'rgba(26,12,4,0.82)' }}>
+                    <li key={p} className="flex items-center gap-3 text-sm" style={{ color: '#1A0C04' }}>
                       <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current shrink-0" style={{ color: accent }}><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                       {p}
                     </li>
@@ -73,9 +68,8 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Product grid */}
-        <div className="mb-6">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-2">
             <div className="w-8 h-px" style={{ background: '#C8943A' }}/>
             <span className="text-xs font-semibold tracking-[4px] uppercase" style={{ color: '#A07020' }}>Sortiment</span>
           </div>
@@ -83,13 +77,10 @@ export default function Services() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {products.map(({ name, sub, desc }) => (
-            <div key={name} className="rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
-              style={{ background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(200,148,58,0.18)' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(200,148,58,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.85)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(200,148,58,0.18)'; e.currentTarget.style.background = 'rgba(255,255,255,0.6)' }}>
-              <div className="text-display text-2xl mb-1" style={{ color: '#C8943A' }}>{name}</div>
-              <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'rgba(26,12,4,0.55)' }}>{sub}</div>
-              <div className="text-xs leading-relaxed" style={{ color: 'rgba(26,12,4,0.72)' }}>{desc}</div>
+            <div key={name} className="card-organic p-6 cursor-default">
+              <div className="text-display text-xl mb-1" style={{ color: '#C8943A' }}>{name}</div>
+              <div className="text-[10px] font-semibold uppercase tracking-wider mb-2" style={{ color: 'rgba(26,12,4,0.7)' }}>{sub}</div>
+              <div className="text-xs leading-relaxed" style={{ color: '#1A0C04' }}>{desc}</div>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const sections = [['O nás','#o-nas'],['Služby','#služby'],['Spolupráce','#jak-to-funguje'],['Kontakt','#kontakt']]
+const sections = [['O nás','#o-nas'],['Služby','#služby'],['Spolupráce','#jak-to-funguje'],['Fotografie','/fotogalerie.html'],['Reference','/reference.html'],['Kontakt','#kontakt']]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -41,19 +41,35 @@ export default function Navbar() {
           <img src="/images/logo good.png" alt="Pila Zalíbené" style={{ height: '80px', width: 'auto', filter: 'drop-shadow(0 2px 8px rgba(26,12,4,0.15))', marginTop: '-8px', marginBottom: '-8px' }}/>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          {sections.map(([label, href]) => (
-            <a key={label} href={href}
-              className="text-xs font-medium tracking-[2px] uppercase transition-all duration-200 cursor-pointer relative"
-              style={{ color: active === href ? '#1A0C04' : 'rgba(26,12,4,0.5)' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#1A0C04'}
-              onMouseLeave={e => e.currentTarget.style.color = active === href ? '#1A0C04' : 'rgba(26,12,4,0.5)'}>
-              {label}
-              {active === href && (
-                <span style={{ position:'absolute', bottom:'-3px', left:0, right:0, height:'2px', background:'#C8943A', borderRadius:'1px' }}/>
-              )}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center gap-2">
+          {sections.map(([label, href]) => {
+            const isActive = active === href
+            return (
+              <a key={label} href={href}
+                className="text-[11px] font-semibold tracking-[2px] uppercase transition-all duration-200 cursor-pointer px-4 py-2 rounded-full"
+                style={{
+                  color: isActive ? '#F5EDD8' : 'rgba(26,12,4,0.55)',
+                  background: isActive ? '#2A1208' : 'transparent',
+                  border: isActive ? '1px solid rgba(200,148,58,0.3)' : '1px solid transparent',
+                }}
+                onMouseEnter={e => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = 'rgba(42,18,8,0.08)'
+                    e.currentTarget.style.color = '#1A0C04'
+                    e.currentTarget.style.borderColor = 'rgba(200,148,58,0.15)'
+                  }
+                }}
+                onMouseLeave={e => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = 'transparent'
+                    e.currentTarget.style.color = 'rgba(26,12,4,0.55)'
+                    e.currentTarget.style.borderColor = 'transparent'
+                  }
+                }}>
+                {label}
+              </a>
+            )
+          })}
         </div>
 
         <div className="flex items-center gap-3 shrink-0">

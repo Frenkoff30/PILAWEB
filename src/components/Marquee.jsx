@@ -10,17 +10,20 @@ const items = [
 export default function Marquee() {
   const doubled = [...items, ...items]
   return (
-    <div className="overflow-hidden py-5" style={{
-      borderTop: '1px solid rgba(200,148,58,0.15)',
-      borderBottom: '1px solid rgba(200,148,58,0.15)',
-      background: 'rgba(200,148,58,0.06)',
+    <div className="overflow-hidden py-6" style={{
+      borderTop: '1px solid rgba(200,148,58,0.1)',
+      borderBottom: '1px solid rgba(200,148,58,0.1)',
     }}>
       <div className="marquee-track">
         {doubled.map((item, i) => (
-          <span key={i} className="inline-flex items-center gap-8 px-8 text-display text-2xl tracking-widest whitespace-nowrap"
-            style={{ color: i % 2 === 0 ? '#C8943A' : 'rgba(26,12,4,0.45)' }}>
+          <span key={i} className="inline-flex items-center gap-10 px-10 text-display whitespace-nowrap"
+            style={{
+              fontSize: 'clamp(1.2rem,2.5vw,1.6rem)',
+              letterSpacing: '0.15em',
+              color: i % 2 === 0 ? 'rgba(200,148,58,0.7)' : 'rgba(26,12,4,0.25)',
+            }}>
             {item}
-            <span style={{ color: 'rgba(200,148,58,0.5)', fontSize: '1rem' }}>✦</span>
+            <span style={{ color: 'rgba(200,148,58,0.25)', fontSize: '0.6em' }}>●</span>
           </span>
         ))}
       </div>

@@ -17,6 +17,25 @@
 /* ── Display font ── */
 .text-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; }
 
+/* ── Wood text fill ── */
+.text-wood {
+  background-image:
+    repeating-linear-gradient(
+      2deg,
+      #2A1508 0px, #3D200C 3px, #1A0C04 5px, #2E1709 8px, #1A0C04 10px,
+      #35190A 13px, #1A0C04 15px, #2A1508 18px, #1A0C04 20px
+    ),
+    repeating-linear-gradient(
+      -1deg,
+      transparent 0px, transparent 12px,
+      rgba(200,148,58,0.12) 12px, rgba(200,148,58,0.12) 13px,
+      transparent 13px, transparent 28px
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* ── Amber glows ── */
 .amber-glow    { box-shadow: 0 0 40px rgba(200,148,58,0.4), 0 0 80px rgba(200,148,58,0.15); }
 .amber-glow-sm { box-shadow: 0 0 20px rgba(200,148,58,0.3); }
@@ -125,6 +144,24 @@
 [data-reveal][data-delay="4"] { transition-delay: 0.45s; }
 [data-reveal].revealed { opacity: 1; transform: translateY(0); }
 
+/* ── Organic card system ── */
+.card-organic {
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(200,148,58,0.12);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(26,12,4,0.04), 0 1px 3px rgba(26,12,4,0.03);
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+  cursor: default;
+}
+.card-organic:hover {
+  border-color: rgba(200,148,58,0.4);
+  box-shadow: 0 16px 48px rgba(26,12,4,0.1), 0 4px 12px rgba(200,148,58,0.08);
+  transform: translateY(-4px);
+}
+
+/* ── Smooth section transitions ── */
+.section-pad { padding: clamp(80px,12vw,140px) clamp(16px,4vw,64px); }
+
 /* ── Underline hover ── */
 .link-hover { position: relative; }
 .link-hover::after {
@@ -133,3 +170,9 @@
   transition: width 0.25s ease;
 }
 .link-hover:hover::after { width: 100%; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+}
