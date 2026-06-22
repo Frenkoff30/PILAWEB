@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center" style={{ paddingTop: '80px', zIndex: 1 }}>
+    <section className="relative flex items-center" style={{ paddingTop: '120px', paddingBottom: '80px', zIndex: 1 }}>
 
       <div style={{
         position: 'absolute', top: '80px', left: 0, right: 0, height: '1px',
@@ -19,8 +19,8 @@ export default function Hero() {
             </h1>
 
             <p className="hero-sub mb-10 leading-relaxed" style={{ color: 'rgba(26,12,4,0.78)', fontSize: '1.25rem', maxWidth: '400px', fontWeight: 500 }}>
-              Pořez kulatiny na míru, piliny
-              a štěpka na topení. Zalíbené u Hlinska.
+              Rodinná pila v&nbsp;Zalíbeném u&nbsp;Hlinska.<br/>
+              Kulatina, řezivo, piliny i&nbsp;štěpka.
             </p>
 
             <div className="hero-cta flex flex-wrap gap-3">
@@ -55,7 +55,7 @@ export default function Hero() {
               <div style={{ position:'absolute', inset:'-18px', border:'1px solid rgba(200,148,58,0.2)', borderRadius:'50%' }}/>
               <div style={{ position:'absolute', inset:'-10px', border:'1px dashed rgba(200,148,58,0.1)', borderRadius:'50%' }}/>
               <img src="/images/logo good.png" alt="Pila Zalíbené"
-                style={{ width:'clamp(160px,18vw,240px)', height:'auto', position:'relative', filter:'drop-shadow(0 8px 32px rgba(26,12,4,0.2))' }}/>
+                style={{ width:'clamp(200px,24vw,320px)', height:'auto', position:'relative', filter:'drop-shadow(0 8px 32px rgba(26,12,4,0.2))' }}/>
             </div>
           </div>
 

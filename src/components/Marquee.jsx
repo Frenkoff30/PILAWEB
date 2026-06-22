@@ -1,10 +1,10 @@
 const items = [
-  'Pořez kulatiny na míru',
+  'Pořez na míru',
   'Rychlé zpracování',
   'Piliny & Štěpka',
   'Férové jednání',
-  'Zalíbené · Hlinsko',
-  'Rodinná pila',
+  'Maximální výtěžnost',
+  'Kvalitní řezivo',
 ]
 
 export default function Marquee() {

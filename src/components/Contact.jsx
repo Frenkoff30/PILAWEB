@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="p-6 rounded-2xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
               <div className="text-[10px] uppercase tracking-widest mb-2" style={{ color: 'rgba(245,237,216,0.4)' }}>Provozní doba</div>
               <div className="text-sm font-semibold" style={{ color: '#F5EDD8' }}>Po – Pá dle domluvy</div>
-              <div className="text-xs mt-1" style={{ color: 'rgba(245,237,216,0.55)' }}>Nejlepší je zavolat nebo napsat na Instagram.</div>
+              <div className="text-xs mt-1" style={{ color: 'rgba(245,237,216,0.55)' }}>Nejlepší je zavolat nebo napsat na&nbsp;Instagram.</div>
             </div>
           </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
               <div className="text-center py-10">
                 <div className="text-4xl mb-4" style={{ color: '#C8943A' }}>✓</div>
                 <p className="text-lg font-semibold" style={{ color: '#F5EDD8' }}>Otvírá se váš e-mail klient.</p>
-                <p className="text-sm mt-2" style={{ color: 'rgba(245,237,216,0.55)' }}>Odešlete připravenou zprávu a ozveme se.</p>
+                <p className="text-sm mt-2" style={{ color: 'rgba(245,237,216,0.55)' }}>Odešlete připravenou zprávu a&nbsp;ozveme se.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
