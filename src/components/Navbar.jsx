@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-8 md:px-16 py-2 flex items-center justify-between gap-6">
 
         <a href="#" className="flex items-center cursor-pointer shrink-0">
-          <img src="/images/logo good.png" alt="Pila Zalíbené" style={{ height: '80px', width: 'auto', filter: 'drop-shadow(0 2px 8px rgba(26,12,4,0.15))', marginTop: '-8px', marginBottom: '-8px' }}/>
+          <img src="/images/logo-good.png" alt="Pila Zalíbené" style={{ height: '80px', width: 'auto', filter: 'drop-shadow(0 2px 8px rgba(26,12,4,0.15))', marginTop: '-8px', marginBottom: '-8px' }}/>
         </a>
 
         <div className="hidden md:flex items-center gap-2">

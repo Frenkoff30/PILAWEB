@@ -1,32 +1,29 @@
 const services = [
   {
-    icon: <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M17 8C8 10 5.9 16.17 3.82 19.24L5.71 21l1-1 1 1 1-1 1 1 1-1 1 1 1.06-1.06C14 18 18 13 19 8l-2 .5z"/></svg>,
-    title: 'POŘEZ NA MÍRU',
-    desc: 'Vaši kulatinu zpracujeme přesně podle zadaných rozměrů. Z každého kmene vytěžíme co nejvíce kvalitního řeziva.',
-    points: ['Prkna, trámy i latě', 'Co největší výtěžnost', 'Řezivo podle vašich rozměrů'],
+    icon: <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M3 6h18v3.2H3zM3 10.4h18v3.2H3zM3 14.8h18V18H3z"/></svg>,
+    title: 'PRODEJ ŘEZIVA',
+    desc: 'Nabízíme vlastní řezivo skladem i na zakázku. Prkna, trámy, latě a fošny z kvalitního dřeva, připravené k okamžitému odběru.',
     accent: '#C8943A',
   },
   {
-    icon: <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>,
-    title: 'RYCHLÉ ZPRACOVÁNÍ',
-    desc: 'Přivezete kulatinu a my se o vše postaráme. Férový přístup a cenová nabídka předem.',
-    points: ['Osobní přístup ke každému', 'Cenová nabídka bez závazků', 'Termín podle domluvy'],
+    icon: <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M17 8C8 10 5.9 16.17 3.82 19.24L5.71 21l1-1 1 1 1-1 1 1 1-1 1 1 1.06-1.06C14 18 18 13 19 8l-2 .5z"/></svg>,
+    title: 'POŘEZ NA MÍRU',
+    desc: 'Pořežeme přesně podle vašich rozměrů s maximální výtěžností. Férová cena domluvená předem, termín podle vašich potřeb.',
     accent: '#4A7C2F',
   },
   {
     icon: <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current"><path d="M13.5 0.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5 0.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>,
-    title: 'PILINY',
-    desc: 'Nabízíme piliny suché i čerstvé. Skvěle se hodí na topení v kotlích na biomasu i na mulčování zahrady.',
-    points: ['Suché i čerstvé', 'Na topení i do kotle', 'Vhodné na mulčování'],
+    title: 'PILINY NA TOPENÍ',
+    desc: 'Suché i čerstvé piliny vhodné do kotlů na biomasu i na mulčování zahrady. Odeberete přesně takové množství, jaké potřebujete.',
     accent: '#A67830',
   },
 ]
 
 const products = [
-  { name: 'Prkna', sub: 'Různé profily', desc: 'Od tenkých prken až po silné fošny.' },
-  { name: 'Trámy', sub: 'Stavební řezivo', desc: 'Hranoly pro novostavby i rekonstrukce.' },
-  { name: 'Latě', sub: 'Drobné řezivo', desc: 'Lišty a drobné profily podle vašich rozměrů.' },
-  { name: 'Piliny', sub: 'Na topení', desc: 'Suché i čerstvé, ideální na topení.' },
+  { name: 'PRKNA', sub: 'Řezivo', desc: 'Od tenkých prken po silné fošny v různých profilech.' },
+  { name: 'TRÁMY', sub: 'Stavební řezivo', desc: 'Hranoly a trámy pro novostavby i rekonstrukce.' },
+  { name: 'LATĚ', sub: 'Drobné řezivo', desc: 'Střešní latě a drobné profily podle vašich rozměrů.' },
+  { name: 'PILINY', sub: 'Palivo i mulč', desc: 'Suché i čerstvé, ideální do kotlů na biomasu.' },
 ]
 
 export default function Services() {
@@ -44,26 +41,31 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
-          {services.map(({ icon, title, desc, points, accent }) => (
-            <div key={title} data-tilt className="card-organic overflow-hidden flex flex-col group">
-              <div style={{ height: '3px', background: accent }}/>
+        <div className="grid md:grid-cols-3 gap-6 mb-24">
+          {services.map(({ icon, title, desc, accent }, i) => (
+            <div key={title} data-tilt className="card-organic group relative overflow-hidden flex flex-col">
+              {/* Gradient accent bar */}
+              <div style={{ height: '4px', background: `linear-gradient(90deg, ${accent} 0%, ${accent}88 100%)` }}/>
+
               <div className="p-8 flex flex-col flex-1">
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ background: `${accent}15`, color: accent }}>
-                  {icon}
+                {/* Icon + faint number */}
+                <div className="flex items-start justify-between mb-7">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                    style={{ background: `linear-gradient(135deg, ${accent}22, ${accent}0a)`, color: accent, border: `1px solid ${accent}26` }}>
+                    {icon}
+                  </div>
+                  <span className="text-display leading-none select-none" style={{ fontSize: '2.8rem', color: `${accent}24` }}>
+                    0{i + 1}
+                  </span>
                 </div>
-                <h3 className="text-display text-xl mb-3 leading-tight" style={{ color: '#1A0C04' }}>{title}</h3>
-                <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: '#1A0C04' }}>{desc}</p>
-                <ul className="space-y-2.5 pt-5" style={{ borderTop: '1px solid rgba(26,12,4,0.06)' }}>
-                  {points.map(p => (
-                    <li key={p} className="flex items-center gap-3 text-sm" style={{ color: '#1A0C04' }}>
-                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current shrink-0" style={{ color: accent }}><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
+
+                <h3 className="text-display text-2xl mb-3 leading-tight" style={{ color: '#1A0C04' }}>{title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,12,4,0.7)' }}>{desc}</p>
               </div>
+
+              {/* Hover underline */}
+              <div className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500"
+                style={{ background: accent }}/>
             </div>
           ))}
         </div>
@@ -77,10 +79,13 @@ export default function Services() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {products.map(({ name, sub, desc }) => (
-            <div key={name} data-tilt className="card-organic p-6">
-              <div className="text-display text-xl mb-1" style={{ color: '#C8943A' }}>{name}</div>
-              <div className="text-[10px] font-semibold uppercase tracking-wider mb-2" style={{ color: 'rgba(26,12,4,0.7)' }}>{sub}</div>
-              <div className="text-xs leading-relaxed" style={{ color: '#1A0C04' }}>{desc}</div>
+            <div key={name} data-tilt className="card-organic group relative overflow-hidden p-6">
+              <div className="text-display text-2xl mb-1" style={{ color: '#C8943A' }}>{name}</div>
+              <div className="text-[10px] font-semibold uppercase tracking-[2px] mb-3" style={{ color: 'rgba(26,12,4,0.45)' }}>{sub}</div>
+              <div className="text-xs leading-relaxed" style={{ color: 'rgba(26,12,4,0.7)' }}>{desc}</div>
+              {/* Hover underline */}
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-400"
+                style={{ background: '#C8943A' }}/>
             </div>
           ))}
         </div>

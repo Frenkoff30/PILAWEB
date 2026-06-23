@@ -12,6 +12,7 @@ import CtaBanner from './components/CtaBanner'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
+import MobileCta from './components/MobileCta'
 import SawCursor from './components/SawCursor'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { useTilt } from './hooks/useTilt'
@@ -27,6 +28,7 @@ export default function App() {
         <Background />
         <SawCursor />
         <BackToTop />
+        <MobileCta />
         <div className="relative" style={{ zIndex: 1 }}>
           <Navbar />
           <main>

@@ -20,7 +20,7 @@ export default function LoadingScreen() {
       transition: 'opacity 0.6s ease',
       pointerEvents: phase >= 2 ? 'none' : 'all',
     }}>
-      <img src="/images/logo good.png" alt=""
+      <img src="/images/logo-good.png" alt=""
         style={{
           width: '140px', height: 'auto',
           opacity: phase >= 1 ? 1 : 0,

@@ -47,7 +47,7 @@ export default function Hero() {
                 borderRadius: '50%',
                 animation: 'blobPulse 5s ease-in-out infinite',
               }}/>
-              <img src="/images/logo good.png" alt="Pila Zalíbené"
+              <img src="/images/logo-good.png" alt="Pila Zalíbené"
                 style={{ width:'clamp(200px,24vw,320px)', height:'auto', position:'relative', filter:'drop-shadow(0 12px 40px rgba(26,12,4,0.18))' }}/>
             </div>
           </div>

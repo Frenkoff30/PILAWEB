@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 
         <a href="#" className="flex items-center cursor-pointer shrink-0">
-          <img src="/images/logo good.png" alt="Pila Zalíbené"
+          <img src="/images/logo-good.png" alt="Pila Zalíbené"
             style={{ height: '110px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.9 }}/>
         </a>
 
