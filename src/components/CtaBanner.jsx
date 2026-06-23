@@ -13,6 +13,7 @@ export default function CtaBanner() {
       <div style={{ position:'absolute', bottom:'0', left:'30%', width:'40vw', height:'30vw', borderRadius:'50%', background:'radial-gradient(circle, rgba(200,148,58,0.06) 0%, transparent 60%)', pointerEvents:'none' }}/>
 
       <div className="relative px-8 md:px-16" style={{ zIndex: 1, paddingTop: 'clamp(90px,11vw,130px)', paddingBottom: 'clamp(50px,7vw,80px)' }}>
+
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
 
           <a href="/fotogalerie.html" data-tilt

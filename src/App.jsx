@@ -5,7 +5,9 @@ import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import About from './components/About'
 import Services from './components/Services'
+import Showcase from './components/Showcase'
 import HowItWorks from './components/HowItWorks'
+import Feature from './components/Feature'
 import CtaBanner from './components/CtaBanner'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -32,7 +34,9 @@ export default function App() {
             <div data-reveal><Marquee /></div>
             <About />
             <div data-reveal data-delay="1"><Services /></div>
+            <Showcase />
             <div data-reveal data-delay="1"><HowItWorks /></div>
+            <div data-reveal data-delay="1"><Feature /></div>
             <div data-reveal><CtaBanner /></div>
             <div data-reveal data-delay="1"><Contact /></div>
           </main>

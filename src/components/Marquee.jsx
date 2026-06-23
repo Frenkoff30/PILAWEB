@@ -1,7 +1,7 @@
 const items = [
   'Pořez na míru',
   'Rychlé zpracování',
-  'Piliny & Štěpka',
+  'Piliny na topení',
   'Férové jednání',
   'Maximální výtěžnost',
   'Kvalitní řezivo',

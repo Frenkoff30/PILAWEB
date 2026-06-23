@@ -10,21 +10,97 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Inter',sans-serif; background:#F0E6CC; color:#1A0C04; min-height:100vh; }
     .display { font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em; }
+    img { image-orientation: from-image; }
+    .grid {
+      columns: 3 280px;
+      column-gap: 16px;
+    }
+    .grid figure {
+      break-inside: avoid;
+      margin: 0 0 16px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(200,148,58,0.18);
+      box-shadow: 0 4px 24px rgba(26,12,4,0.06);
+      cursor: pointer;
+      transition: transform .35s cubic-bezier(0.16,1,0.3,1), box-shadow .35s ease, border-color .35s ease;
+      background:#1A0C04;
+    }
+    .grid figure:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 50px rgba(26,12,4,0.16);
+      border-color: rgba(200,148,58,0.5);
+    }
+    .grid img { width:100%; height:auto; display:block; transition: transform .5s cubic-bezier(0.16,1,0.3,1); }
+    .grid figure:hover img { transform: scale(1.05); }
+    /* Lightbox */
+    .lb { position:fixed; inset:0; background:rgba(20,9,3,0.92); backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; z-index:100; padding:24px; }
+    .lb.open { display:flex; }
+    .lb img { max-width:92vw; max-height:88vh; border-radius:12px; box-shadow:0 30px 80px rgba(0,0,0,0.5); }
+    .lb-btn { position:absolute; width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(200,148,58,0.3); color:#F5EDD8; font-size:22px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .2s; user-select:none; }
+    .lb-btn:hover { background:rgba(200,148,58,0.3); }
+    .lb-close { top:24px; right:28px; }
+    .lb-prev { left:24px; top:50%; transform:translateY(-50%); }
+    .lb-next { right:24px; top:50%; transform:translateY(-50%); }
+    .lb-prev:hover, .lb-next:hover { transform:translateY(-50%) scale(1.1); }
+    .lb-count { position:absolute; bottom:24px; left:50%; transform:translateX(-50%); color:rgba(245,237,216,0.7); font-size:13px; letter-spacing:2px; }
+    @media (max-width:600px){ .lb-prev{left:10px;} .lb-next{right:10px;} .lb-btn{width:44px;height:44px;} }
   </style>
 </head>
 <body>
-  <div style="max-width:900px; margin:0 auto; padding:60px 24px; text-align:center;">
-    <a href="/" style="display:inline-block; margin-bottom:40px; text-decoration:none; color:#C8943A; font-size:14px; font-weight:600;">← Zpět na hlavní stránku</a>
-    <h1 class="display" style="font-size:clamp(3rem,8vw,6rem); line-height:0.9; margin-bottom:16px;">FOTOGALERIE</h1>
-    <p style="font-size:1.1rem; color:rgba(26,12,4,0.65); margin-bottom:60px;">Připravujeme pro vás fotky z naší pily a ukázky hotového řeziva.</p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px;">
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 1</div>
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 2</div>
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 3</div>
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 4</div>
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 5</div>
-      <div style="aspect-ratio:4/3; border-radius:16px; background:rgba(200,148,58,0.08); border:1px dashed rgba(200,148,58,0.3); display:flex; align-items:center; justify-content:center; color:rgba(26,12,4,0.3); font-size:14px;">Foto 6</div>
+  <div style="max-width:1100px; margin:0 auto; padding:60px 24px;">
+    <a href="/" style="display:inline-block; margin-bottom:32px; text-decoration:none; color:#C8943A; font-size:14px; font-weight:600;">← Zpět na hlavní stránku</a>
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+      <span style="width:40px; height:1px; background:#C8943A;"></span>
+      <span style="font-size:12px; letter-spacing:4px; text-transform:uppercase; font-weight:600; color:#A07020;">Galerie</span>
+    </div>
+    <h1 class="display" style="font-size:clamp(3rem,8vw,6rem); line-height:0.9; margin-bottom:48px;">FOTOGALERIE</h1>
+
+    <div class="grid">
+      <figure><img src="/images/pilafoto.jpeg" alt="Pořez kmene na pile" loading="lazy"/></figure>
+      <figure><img src="/images/piladum.jpeg" alt="Areál pily" loading="lazy"/></figure>
+      <figure><img src="/images/pilafoto2.jpeg" alt="Naskládané trámy" loading="lazy"/></figure>
+      <figure><img src="/images/pilafoto5.jpeg" alt="Interiér pily" loading="lazy"/></figure>
+      <figure><img src="/images/pilafoto4.jpeg" alt="Naskládané řezivo" loading="lazy"/></figure>
+      <figure><img src="/images/pilafoto3.jpeg" alt="Technika na pile" loading="lazy"/></figure>
     </div>
   </div>
+
+  <div class="lb" id="lb">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Zavřít">✕</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Předchozí">‹</button>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Další">›</button>
+    <img src="" alt="" id="lbImg"/>
+    <div class="lb-count" id="lbCount"></div>
+  </div>
+
+  <script>
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCount');
+    const imgs = Array.from(document.querySelectorAll('.grid img'));
+    let idx = 0;
+
+    function show(i) {
+      idx = (i + imgs.length) % imgs.length;
+      lbImg.src = imgs[idx].src;
+      lbImg.alt = imgs[idx].alt;
+      lbCount.textContent = (idx + 1) + ' / ' + imgs.length;
+    }
+    function open(i) { show(i); lb.classList.add('open'); }
+    function close() { lb.classList.remove('open'); }
+
+    imgs.forEach((img, i) => img.addEventListener('click', () => open(i)));
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); show(idx - 1); });
+    document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); show(idx + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  </script>
 </body>
 </html>

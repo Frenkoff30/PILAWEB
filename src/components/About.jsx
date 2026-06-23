@@ -1,3 +1,5 @@
+import Slideshow from './Slideshow'
+
 export default function About() {
   return (
     <section id="o-nas" className="relative" style={{ background: '#1C0E05', overflow: 'hidden' }}>
@@ -35,18 +37,28 @@ export default function About() {
                 Jsme rodinná pila v&nbsp;Zalíbeném u&nbsp;Hlinska. Pořezáváme kulatinu na míru pro jednotlivce i&nbsp;firmy. Prkna, trámy, latě i&nbsp;sámované řezivo přesně dle vašich požadavků.
               </p>
               <p className="text-lg leading-relaxed" style={{ color: 'rgba(245,237,216,0.6)', fontSize: '1.15rem' }}>
-                Zakládáme si na férovém jednání, rychlém zpracování a&nbsp;maximální výtěžnosti z&nbsp;každého metru kubického. Nabízíme také piliny suché i&nbsp;čerstvé a&nbsp;štěpku na topení.
+                Zakládáme si na férovém jednání, rychlém zpracování a&nbsp;maximální výtěžnosti z&nbsp;každého metru kubického. Nabízíme také piliny suché i&nbsp;čerstvé na topení.
               </p>
             </div>
 
             <div className="flex items-center justify-center">
-              <img src="/images/logo good.png" alt="Pila Zalíbené"
-                style={{
-                  width: 'clamp(200px,24vw,340px)',
-                  height: 'auto',
-                  filter: 'brightness(0) invert(1)',
-                  opacity: 0.9,
-                }}/>
+              <div style={{
+                position: 'relative', width: '100%', maxWidth: '440px',
+                borderRadius: '24px', overflow: 'hidden',
+                border: '1px solid rgba(200,148,58,0.25)',
+                boxShadow: '0 24px 70px rgba(0,0,0,0.45)',
+              }}>
+                <Slideshow
+                  images={['/images/piladum.jpeg', '/images/pilafoto3.jpeg', '/images/pilafoto5.jpeg']}
+                  alt="Areál pily Zalíbené" aspect="4 / 5" />
+                <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(18,8,2,0.92) 0%, rgba(18,8,2,0.5) 25%, transparent 55%)' }}/>
+                <div style={{ position: 'absolute', bottom: '20px', left: '24px', right: '24px' }}>
+                  <div className="inline-flex items-center mb-2 px-3 py-1 rounded-full" style={{ background: 'rgba(200,148,58,0.18)', border: '1px solid rgba(200,148,58,0.35)' }}>
+                    <span className="text-[10px] tracking-[3px] uppercase font-bold" style={{ color: '#E5B860' }}>Náš areál</span>
+                  </div>
+                  <div className="text-display text-3xl" style={{ color: '#FFFFFF', textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>ZALÍBENÉ U HLINSKA</div>
+                </div>
+              </div>
             </div>
 
           </div>
