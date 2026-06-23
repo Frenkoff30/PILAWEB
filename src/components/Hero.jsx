@@ -1,3 +1,5 @@
+import SawBladeIcon from './SawBladeIcon'
+
 export default function Hero() {
   return (
     <section className="relative flex items-center section-pad" style={{ paddingTop: '120px', zIndex: 1 }}>
@@ -56,7 +58,7 @@ export default function Hero() {
           <div className="hidden lg:flex flex-col gap-3 hero-right" style={{ zIndex: 2 }}>
             {[
               { icon: <svg viewBox="0 0 24 24" className="w-4.5 h-4.5 fill-current"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>, label:'Adresa', value:'Zalíbené 20, Hlinsko', href:'https://maps.google.com/?q=Zalibene+20+Hlinsko' },
-              { icon: <svg viewBox="0 0 24 24" className="w-4.5 h-4.5 fill-current"><path d="M17 8C8 10 5.9 16.17 3.82 19.24L5.71 21l1-1 1 1 1-1 1 1 1-1 1 1 1.06-1.06C14 18 18 13 19 8l-2 .5z"/></svg>, label:'Pořez kulatiny', value:'Na míru dle vašich rozměrů', href:'#služby' },
+              { icon: <SawBladeIcon className="w-5 h-5" />, label:'Pořez kulatiny', value:'Na míru dle vašich rozměrů', href:'#služby' },
               { icon: <svg viewBox="0 0 24 24" className="w-4.5 h-4.5 fill-current"><path d="M13.5 0.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5 0.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>, label:'Piliny', value:'Suché i čerstvé na topení', href:'#služby' },
             ].map(({ icon, label, value, href }) => (
               <a key={label} href={href}

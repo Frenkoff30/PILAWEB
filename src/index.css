@@ -67,6 +67,13 @@
 .ring-float { animation: floatRing 14s ease-in-out infinite; }
 .ring-float-2 { animation: floatRing 18s ease-in-out 3s infinite reverse; }
 
+/* ── Step watermark icon float ── */
+@keyframes stepFloat {
+  0%,100% { transform: translateY(0) rotate(-2deg); }
+  50%     { transform: translateY(-18px) rotate(2deg); }
+}
+.step-float { animation: stepFloat 7s ease-in-out infinite; }
+
 /* ── Fade up ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
