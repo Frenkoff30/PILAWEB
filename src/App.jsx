@@ -35,8 +35,8 @@ export default function App() {
             <About />
             <div data-reveal data-delay="1"><Services /></div>
             <Showcase />
-            <div data-reveal data-delay="1"><HowItWorks /></div>
             <div data-reveal data-delay="1"><Feature /></div>
+            <div data-reveal data-delay="1"><HowItWorks /></div>
             <div data-reveal><CtaBanner /></div>
             <div data-reveal data-delay="1"><Contact /></div>
           </main>
