@@ -22,7 +22,7 @@ export default function Showcase() {
             POŘEZ KULATINY<br/>OD KMENE PO ŘEZIVO
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: 'rgba(245,237,216,0.8)', maxWidth: '460px' }}>
-            Každý kmen zpracujeme &nbsp;přímo na naší pile v&nbsp;Zalíbeném.
+            Každý kmen zpracujeme přímo u&nbsp;nás na pile v&nbsp;Zalíbeném u&nbsp;Hlinska.
           </p>
         </div>
       </div>

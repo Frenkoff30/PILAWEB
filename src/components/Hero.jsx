@@ -14,8 +14,8 @@ export default function Hero() {
             </h1>
 
             <p className="hero-sub mb-10 leading-relaxed" style={{ color: 'rgba(26,12,4,0.7)', fontSize: '1.2rem', maxWidth: '400px', fontWeight: 450 }}>
-              Rodinná pila v&nbsp;Zalíbeném u&nbsp;Hlinska.<br/>
-              Kulatina, řezivo i&nbsp;piliny.
+              Pila v&nbsp;Zalíbeném u&nbsp;Hlinska.<br/>
+              Kulatina, řezivo i&nbsp;piliny na jednom místě.
             </p>
 
             <div className="hero-cta flex flex-wrap gap-3">

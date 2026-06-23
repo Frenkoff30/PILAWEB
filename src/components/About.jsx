@@ -34,10 +34,10 @@ export default function About() {
                 PILA<br/>ZALÍBENÉ
               </h2>
               <p className="text-lg leading-relaxed mb-6" style={{ color: 'rgba(245,237,216,0.85)', fontSize: '1.15rem' }}>
-                Jsme rodinná pila v&nbsp;Zalíbeném u&nbsp;Hlinska. Pořezáváme kulatinu na míru pro jednotlivce i&nbsp;firmy. Prkna, trámy, latě i&nbsp;sámované řezivo přesně dle vašich požadavků.
+                Jsme pila v&nbsp;Zalíbeném u&nbsp;Hlinska. Řežeme kulatinu na zakázku pro jednotlivce i&nbsp;firmy. Prkna, trámy, latě i&nbsp;sámované řezivo přesně podle vašich rozměrů.
               </p>
               <p className="text-lg leading-relaxed" style={{ color: 'rgba(245,237,216,0.6)', fontSize: '1.15rem' }}>
-                Zakládáme si na férovém jednání, rychlém zpracování a&nbsp;maximální výtěžnosti z&nbsp;každého metru kubického. Nabízíme také piliny suché i&nbsp;čerstvé na topení.
+                Zakládáme si na poctivém přístupu, rychlém zpracování a&nbsp;co největší výtěžnosti z&nbsp;každého kmene. Nabízíme také piliny suché i&nbsp;čerstvé na topení.
               </p>
             </div>
 

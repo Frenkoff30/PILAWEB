@@ -30,10 +30,10 @@ export default function Feature() {
               Z KAŽDÉHO<br/>KMENE MAXIMUM
             </h2>
             <p className="text-lg leading-relaxed mb-6" style={{ color: 'rgba(26,12,4,0.82)', fontSize: '1.15rem' }}>
-              Kulatinu pořezáváme tak, aby z&nbsp;ní bylo co nejvíc kvalitního řeziva. Žádné zbytečné ztráty, jen poctivá práce a&nbsp;materiál připravený k&nbsp;odvozu.
+              Každý kmen řežeme tak, aby z&nbsp;něj vzniklo co nejvíc kvalitního řeziva. Žádné zbytečné ztráty, jen poctivá práce a&nbsp;materiál připravený k&nbsp;odvozu.
             </p>
             <p className="text-lg leading-relaxed" style={{ color: 'rgba(26,12,4,0.6)', fontSize: '1.15rem' }}>
-              Prkna, trámy i&nbsp;latě skládáme úhledně a&nbsp;přehledně, abyste si je mohli rovnou naložit.
+              Hotové řezivo skládáme přehledně a&nbsp;úhledně, abyste si ho mohli rovnou naložit a&nbsp;odvézt.
             </p>
           </div>
 

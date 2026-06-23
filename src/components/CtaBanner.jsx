@@ -27,7 +27,7 @@ export default function CtaBanner() {
             </div>
             <div className="flex-1">
               <div className="text-display text-lg" style={{ color: '#F5EDD8' }}>FOTOGALERIE</div>
-              <p className="text-[11px]" style={{ color: 'rgba(245,237,216,0.5)' }}>Naše práce a zázemí pily</p>
+              <p className="text-[11px]" style={{ color: 'rgba(245,237,216,0.5)' }}>Podívejte se na naši práci</p>
             </div>
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#C8943A' }}><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
           </a>
@@ -43,7 +43,7 @@ export default function CtaBanner() {
             </div>
             <div className="flex-1">
               <div className="text-display text-lg" style={{ color: '#F5EDD8' }}>REFERENCE</div>
-              <p className="text-[11px]" style={{ color: 'rgba(245,237,216,0.5)' }}>Co říkají naši zákazníci</p>
+              <p className="text-[11px]" style={{ color: 'rgba(245,237,216,0.5)' }}>Zkušenosti našich zákazníků</p>
             </div>
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#6B9B4A' }}><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
           </a>
