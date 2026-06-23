@@ -1,15 +1,32 @@
+import { useEffect, useRef } from 'react'
+
 export default function Showcase() {
+  const imgRef = useRef(null)
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (!imgRef.current) return
+      const rect = imgRef.current.parentElement.getBoundingClientRect()
+      const vh = window.innerHeight
+      const progress = (vh - rect.top) / (vh + rect.height)
+      imgRef.current.style.transform = `translateY(${(progress - 0.5) * -60}px) scale(1.08)`
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <section className="relative" style={{ overflow: 'hidden', minHeight: 'clamp(360px, 50vh, 560px)', display: 'flex', alignItems: 'center' }}>
-      {/* Photo (img honors EXIF orientation, unlike background-image) */}
-      <img src="/images/pilafoto.jpeg" alt="Pořez kulatiny na pile"
+      <img ref={imgRef} src="/images/pilafoto.jpeg" alt="Pořez kulatiny na pile"
         style={{
-          position: 'absolute', inset: 0, width: '100%', height: '100%',
+          position: 'absolute', inset: '-40px 0', width: '100%', height: 'calc(100% + 80px)',
           objectFit: 'cover', objectPosition: 'center',
           imageOrientation: 'from-image',
+          willChange: 'transform',
         }}/>
 
-      {/* Dark overlay for legibility */}
+      {/* Dark overlay */}
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(20,9,3,0.82) 0%, rgba(20,9,3,0.55) 45%, rgba(20,9,3,0.3) 100%)' }}/>
 
       <div className="relative px-8 md:px-16 w-full" style={{ zIndex: 1 }}>

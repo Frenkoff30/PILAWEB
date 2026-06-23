@@ -93,7 +93,15 @@ export default function Navbar() {
       </div>
 
       {/* Scroll progress bar */}
-      <div style={{ position:'absolute', bottom:0, left:0, height:'2px', background:'linear-gradient(to right,#C8943A,#E5B050)', width:`${progress}%`, transition:'width 0.1s linear', borderRadius:'0 2px 2px 0' }}/>
+      <div style={{
+        position: 'absolute', bottom: 0, left: 0,
+        height: '3px',
+        background: 'linear-gradient(to right, #C8943A, #4A7C2F, #E5B050)',
+        width: `${progress}%`,
+        transition: 'width 0.08s linear',
+        borderRadius: '0 3px 3px 0',
+        boxShadow: progress > 5 ? '0 0 12px rgba(200,148,58,0.5)' : 'none',
+      }}/>
     </nav>
   )
 }

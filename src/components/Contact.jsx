@@ -154,6 +154,15 @@ export default function Contact() {
           </div>
 
         </div>
+
+        {/* Google Maps */}
+        <div className="mt-10 rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(200,148,58,0.2)' }}>
+          <iframe
+            title="Pila Zalíbené na mapě"
+            src="https://maps.google.com/maps?q=Zal%C3%ADben%C3%A9+20%2C+539+01+Hlinsko&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="280" style={{ border: 0, display: 'block', filter: 'saturate(0.5) sepia(0.2) contrast(0.95)' }}
+            allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
+        </div>
       </div>
     </section>
     </>
