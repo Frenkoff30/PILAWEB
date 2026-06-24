@@ -14,6 +14,7 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import Faq from './components/Faq'
 import SawCursor from './components/SawCursor'
+import SawdustBurst from './components/SawdustBurst'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { useTilt } from './hooks/useTilt'
 
@@ -27,6 +28,7 @@ export default function App() {
       <div className="relative" style={{ background: '#F0E6CC', minHeight: '100vh' }}>
         <Background />
         <SawCursor />
+        <SawdustBurst />
         <BackToTop />
         <div className="relative" style={{ zIndex: 1 }}>
           <Navbar />

@@ -74,6 +74,10 @@
 }
 .step-float { animation: stepFloat 7s ease-in-out infinite; }
 
+/* ── Loader saw blade spin ── */
+@keyframes loaderSpin { to { transform: rotate(360deg); } }
+.loader-spin { animation: loaderSpin 0.45s linear infinite; transform-origin: 50% 50%; }
+
 /* ── Fade up ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }

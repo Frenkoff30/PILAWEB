@@ -24,6 +24,7 @@ export default function Showcase() {
           objectFit: 'cover', objectPosition: 'center',
           imageOrientation: 'from-image',
           willChange: 'transform',
+          
         }}/>
 
       {/* Dark overlay */}
