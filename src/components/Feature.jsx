@@ -15,7 +15,7 @@ export default function Feature() {
               boxShadow: '0 24px 70px rgba(26,12,4,0.18)',
             }}>
               <Slideshow
-                images={['/images/pilafoto2.jpeg', '/images/pilafoto4.jpeg']}
+                images={['/images/pilafoto2.webp', '/images/pilafoto4.webp']}
                 alt="Naskládané řezivo na pile Zalíbené" aspect="4 / 5" />
             </div>
           </div>

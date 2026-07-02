@@ -18,7 +18,7 @@ export default function Showcase() {
 
   return (
     <section className="relative" style={{ overflow: 'hidden', minHeight: 'clamp(360px, 50vh, 560px)', display: 'flex', alignItems: 'center' }}>
-      <img ref={imgRef} src="/images/pilafoto.jpeg" alt="Pořez kulatiny na pile"
+      <img ref={imgRef} src="/images/pilafoto.webp" alt="Pořez kulatiny na pile"
         style={{
           position: 'absolute', inset: '-40px 0', width: '100%', height: 'calc(100% + 80px)',
           objectFit: 'cover', objectPosition: 'center',

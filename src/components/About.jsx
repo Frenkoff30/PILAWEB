@@ -49,7 +49,7 @@ export default function About() {
                 boxShadow: '0 24px 70px rgba(0,0,0,0.45)',
               }}>
                 <Slideshow
-                  images={['/images/piladum.jpeg', '/images/pilafoto3.jpeg', '/images/pilafoto5.jpeg']}
+                  images={['/images/piladum.webp', '/images/pilafoto3.webp', '/images/pilafoto5.webp']}
                   alt="Areál pily Zalíbené" aspect="4 / 5" />
                 <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(18,8,2,0.92) 0%, rgba(18,8,2,0.5) 25%, transparent 55%)' }}/>
                 <div style={{ position: 'absolute', bottom: '20px', left: '24px', right: '24px' }}>
